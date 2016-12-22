@@ -1,3 +1,13 @@
 {
-    "typescript.tsdk": "./node_modules/typescript/lib"
+    "typescript.tsdk": "./node_modules/typescript/lib",
+
+    //Override exclude settings and also exclude .js and .js.map files
+    "files.exclude": {
+        "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/*.js": {"when": "$(basename).ts"},
+    "**/*.js.map": true
+    }
 }
